@@ -1,0 +1,40 @@
+/*A prefeitura de uma cidade fez uma pesquisa entre os seus habitantes, coletando dados sobre o
+salário e o número de filhos. Faça rotinas que:
+a. Leia esses dados;
+b. Calcule a média do salário da população;
+c. Calcule a média de números de filhos;
+d. Percentual de pessoas com salário até R$ 350,00.
+*/
+
+
+#include <locale.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+    int r;
+    struct endereco{
+
+            int sal;
+            int nf;
+                }x;
+
+            do{
+                    char p[3];
+                printf("\nEscreva seu salário: ");
+                scanf("%d", &x.sal);
+                printf("\nEscreva seu número de filhos: ");
+                scanf(" %s", &x.nf);
+                printf("Deseja continuar?\nDigite 1 para sim e 2 para não\n");
+                scanf("%d", &r);
+                do{
+                    printf("Número inválido, digite novamente");
+                }while(r!=1 || r!=2);
+
+            }while(r==2);
+
+
+}
