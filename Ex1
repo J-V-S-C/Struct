@@ -1,0 +1,39 @@
+/*Construa uma estrutura chamada endereço. Ela deve solicitar a 5 usuários o seu nome, a sua rua, o
+seu número e o andar em que mora. Após imprima os dados digitados pelo usuário.*/
+
+
+#include <stdio.h>
+#include <locale.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+
+    struct endereco{
+            char nome[50];
+            char rua[50];
+            int num;
+            int andar;
+
+                }x[5];
+
+    for(int i=0; i<5; i++)
+            {
+                printf("\nEscreva seu nome: ");
+                scanf(" %s", &x[i].nome);
+                printf("\nEscreva sua rua: ");
+                scanf(" %s", &x[i].rua);
+                printf("\nEscreva seu número: ");
+                scanf("%d", &x[i].num);
+                printf("\nEscreva o andar em que mora: ");
+                scanf("%d", &x[i].andar);
+                 printf("Nome: %s\nRua:%s\nNúmero:%d\nAndar:%d\n", x[i].nome, x[i].rua, x[i].num, x[i].andar);
+
+            }
+
+
+
+}
