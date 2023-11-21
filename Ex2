@@ -1,0 +1,36 @@
+#include <locale.h>
+#include <conio.h>
+#include <string.h>
+#include <stdlib.h>
+
+main()
+{
+    setlocale(LC_ALL, "portuguese");
+
+    struct endereco{
+            char nome[50];
+            int num;
+            float nota1;
+            float nota2;
+
+                }x;
+
+
+                printf("\nEscreva seu número: ");
+                scanf("%d", &x.num);
+                printf("\nEscreva seu nome: ");
+                scanf(" %s", &x.nome);
+                int soma=0;
+                printf("\nEscreva sua nota1: ");
+                scanf("%f", &x.nota1);
+                printf("\nEscreva sua nota2: ");
+                scanf("%f", &x.nota2);
+
+            float media=(x.nota1+x.nota2)/2;
+
+
+        printf("Número: %d \nNome: %s\nNota1: %.2f\nNota2: %.2f\nMédia: %.2f\n",  x.num, x.nome, x.nota1, x.nota2, media);
+
+
+
+}
